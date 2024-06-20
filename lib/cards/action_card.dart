@@ -2,7 +2,6 @@ import 'package:clay_containers/widgets/clay_container.dart';
 import 'package:clay_containers/widgets/clay_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_rx/get_rx.dart';
 
 import '../controller/counter_controller.dart';
 
@@ -38,33 +37,42 @@ class ActionCard extends StatelessWidget {
                   ],
                 ),
               ),
-              Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(5),
-                    child: ClayContainer(
-                      color: const Color(0xFFF2F2F2),
-                      height: 80,
-                      width: 80,
-                      borderRadius: 50,
-                      depth: 100,
-                      spread: 20,
-                      child: Padding(
-                        padding: const EdgeInsets.all(5),
-                        child: IconButton(
-                          onPressed: () {
-                            counterController.showUpdateCard();
-                          },
-                          icon: const Icon(
-                            Icons.navigate_next_rounded,
-                            size: 50,
+              // Obx(() {
+              Obx(() {
+                return Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(5),
+                      child: ClayContainer(
+                        color: const Color(0xFFF2F2F2),
+                        height: 80,
+                        width: 80,
+                        borderRadius: 50,
+                        depth: 100,
+                        spread: 20,
+                        child: Padding(
+                          padding: const EdgeInsets.all(5),
+                          child: Visibility(
+                            visible:
+                                !counterController.updateBallCardShow.value,
+                            child: IconButton(
+                              onPressed: () {
+                                counterController.updateBallCardShow.value =
+                                    !counterController.updateBallCardShow.value;
+                              },
+                              icon: const Icon(
+                                Icons.navigate_next_rounded,
+                                size: 50,
+                              ),
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                ],
-              ),
+                  ],
+                );
+              }),
+              // }),
             ],
           ),
         ],

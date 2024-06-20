@@ -34,7 +34,7 @@ class CounterScreen extends StatelessWidget {
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               color: baseColor,
-              child: const OverCard(),
+              child: OverCard(),
             ),
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
@@ -48,7 +48,7 @@ class CounterScreen extends StatelessWidget {
                   color: baseColor,
                   child: Visibility(
                     visible: counterController.updateBallCardShow.value,
-                    child: const UpdateBallCard(),
+                    child: UpdateBallCard(),
                   ));
             }),
             Container(

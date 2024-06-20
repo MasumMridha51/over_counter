@@ -1,12 +1,41 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get/get_rx/get_rx.dart';
+
+import '../widgets/clay_round_button.dart';
 
 class CounterController extends GetxController {
   // Observable State
-  RxBool updateBallCardShow = true.obs;
+  RxBool updateBallCardShow = false.obs;
 
-  RxBool showUpdateCard() {
-    updateBallCardShow = true.obs;
-    print(updateBallCardShow);
-    return updateBallCardShow;
+  RxList<String> runs = ['2', '6', '8'].obs;
+
+  // add 0 run in history
+  dynamic? add0History() {
+    String run = '0';
+    runs.add(run);
   }
+
+  dynamic? add1History() {
+    String run = '1';
+    runs.add(run);
+  }
+
+  getRunForOver() {
+    for (var i = 0; i < runs.length; i++) {
+      // for(var j = 0; j < runs[i]; j++){
+      //   return Container(
+      //     margin: const EdgeInsets.symmetric(
+      //       vertical: 12,
+      //     ),
+      //     child: ClayRoundButton(
+      //       buttonInputField: Center(child: Text('${runs[i].obs}')),
+      //       rightSpace: const EdgeInsets.only(right: 2),
+      //     ),
+      //   );
+      // }
+    }
+  }
+
+  var test = '5'.obs;
 }
