@@ -36,11 +36,13 @@ class CounterScreen extends StatelessWidget {
               color: baseColor,
               child: OverCard(),
             ),
+            const SizedBox(height: 5,),
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               color: baseColor,
               child: const StatisticCard(),
             ),
+            const SizedBox(height: 5,),
             Obx(() {
               return Container(
                   margin:
@@ -51,11 +53,13 @@ class CounterScreen extends StatelessWidget {
                     child: UpdateBallCard(),
                   ));
             }),
+            const SizedBox(height: 5,),
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               color: baseColor,
               child: ActionCard(),
             ),
+            const SizedBox(height: 5,),
             const Text('All right reserved by Masum Mridha.'),
           ],
         ),

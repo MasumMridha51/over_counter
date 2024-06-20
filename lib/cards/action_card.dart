@@ -37,6 +37,7 @@ class ActionCard extends StatelessWidget {
                   ],
                 ),
               ),
+
               // Obx(() {
               Obx(() {
                 return Column(
@@ -64,13 +65,12 @@ class ActionCard extends StatelessWidget {
                                 Icons.navigate_next_rounded,
                                 size: 50,
                               ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                );
+                                ))))
+                    )
+                ],
+                                );
+
+
               }),
               // }),
             ],

@@ -28,15 +28,24 @@ class OverCard extends StatelessWidget {
             child: Obx(() {
               return Column(
                 children: [
-                  Container(
-                    margin: const EdgeInsets.symmetric(
-                      vertical: 12,
-                    ),
-                    child: ClayRoundButton(
-                      buttonInputField:
-                          Center(child: Text('${counterController.test}')),
-                      rightSpace: EdgeInsets.only(right: 2),
-                    ),
+                  Column(
+                    children: [
+                      Row(
+                        children: [
+                          const ClayRoundButton(
+                            buttonInputField:
+                            Center(child: Text('Ran:')),
+                            rightSpace: EdgeInsets.only(right: 2),
+                          ),
+                          const SizedBox(width: 5,),
+                          ClayRoundButton(
+                            buttonInputField:
+                            Center(child: Text('${counterController.runs[0]}')),
+                            rightSpace: const EdgeInsets.only(right: 2),
+                          )
+                        ],
+                      )
+                    ],
                   ),
                 ],
               );

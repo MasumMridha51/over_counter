@@ -5,15 +5,16 @@ import 'package:get/get_rx/get_rx.dart';
 import '../widgets/clay_round_button.dart';
 
 class CounterController extends GetxController {
+
   // Observable State is here.
   RxBool updateBallCardShow = false.obs;
 
   RxList<String> runs = ['2', '6', '8'].obs;
 
   // add 0 run in history
-  dynamic? add0History() {
-    String run = '0';
-    runs.add(run);
+  dynamic add0History() {
+    String run = '15';
+    runs.insert(0, run);
   }
 
   dynamic? add1History() {
