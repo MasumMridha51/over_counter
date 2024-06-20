@@ -5,7 +5,7 @@ import 'package:get/get_rx/get_rx.dart';
 import '../widgets/clay_round_button.dart';
 
 class CounterController extends GetxController {
-  // Observable State
+  // Observable State is here.
   RxBool updateBallCardShow = false.obs;
 
   RxList<String> runs = ['2', '6', '8'].obs;
