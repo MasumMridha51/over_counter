@@ -21,9 +21,11 @@ class CounterScreen extends StatelessWidget {
         title: const Text('Over Counter'),
         backgroundColor: const Color(0xFFF2F2F2),
         surfaceTintColor: Colors.transparent,
-        actions: const <Widget>[
+        actions: <Widget>[
           ClayRoundButton(
-            buttonInputField: Icon(Icons.restart_alt_rounded),
+            buttonInputField: IconButton(
+                onPressed: counterController.restart,
+                icon: Icon(Icons.restart_alt_rounded)),
             rightSpace: EdgeInsets.only(right: 15),
           ),
         ],
@@ -39,7 +41,7 @@ class CounterScreen extends StatelessWidget {
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               color: baseColor,
-              child: const StatisticCard(),
+              child: StatisticCard(),
             ),
             Obx(() {
               return Container(

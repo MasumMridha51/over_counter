@@ -2,10 +2,15 @@ import 'package:clay_containers/widgets/clay_container.dart';
 import 'package:clay_containers/widgets/clay_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:over_counter/widgets/clay_text_field.dart';
 
+import '../controller/counter_controller.dart';
+
 class StatisticCard extends StatelessWidget {
-  const StatisticCard({super.key});
+  StatisticCard({super.key});
+
+  CounterController counterController = Get.put(CounterController());
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +19,7 @@ class StatisticCard extends StatelessWidget {
       color: baseColor,
       height: 200,
       width: double.infinity,
-      child: const Column(
+      child: Column(
         children: [
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,9 +32,12 @@ class StatisticCard extends StatelessWidget {
                     child: ClayText("Total Over",
                         emboss: true, depth: 95, spread: 1, size: 20),
                   ),
-                  ClayTextField(
-                    intValue: '08',
-                  ),
+                  Obx(() {
+                    return ClayTextField(
+                      intValue:
+                          '${counterController.overCalculation()}.${counterController.balls.length}',
+                    );
+                  })
                 ],
               ),
               Column(
@@ -39,9 +47,11 @@ class StatisticCard extends StatelessWidget {
                     child: ClayText("Total Run",
                         emboss: true, depth: 95, spread: 1, size: 20),
                   ),
-                  ClayTextField(
-                    intValue: '62',
-                  ),
+                  Obx(() {
+                    return ClayTextField(
+                      intValue: '${counterController.totalRun}',
+                    );
+                  })
                 ],
               ),
             ],
@@ -58,9 +68,11 @@ class StatisticCard extends StatelessWidget {
                     child: ClayText("Total Wicket",
                         emboss: true, depth: 95, spread: 1, size: 20),
                   ),
-                  ClayTextField(
-                    intValue: '02',
-                  ),
+                  Obx(() {
+                    return ClayTextField(
+                      intValue: '${counterController.totalWicket}',
+                    );
+                  }),
                 ],
               ),
               Column(
@@ -70,9 +82,11 @@ class StatisticCard extends StatelessWidget {
                     child: ClayText("Extra Run",
                         emboss: true, depth: 95, spread: 1, size: 20),
                   ),
-                  ClayTextField(
-                    intValue: '12',
-                  ),
+                  Obx(() {
+                    return ClayTextField(
+                      intValue: '${counterController.totalExtraRun}',
+                    );
+                  }),
                 ],
               ),
             ],

@@ -1,5 +1,6 @@
 import 'package:clay_containers/widgets/clay_container.dart';
 import 'package:clay_containers/widgets/clay_text.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -26,20 +27,28 @@ class OverCard extends StatelessWidget {
           ),
           Expanded(
             child: Obx(() {
-              return Column(
-                children: [
-                  Container(
-                    margin: const EdgeInsets.symmetric(
-                      vertical: 12,
-                    ),
-                    child: ClayRoundButton(
-                      buttonInputField:
-                          Center(child: Text('${counterController.test}')),
-                      rightSpace: EdgeInsets.only(right: 2),
-                    ),
+              if (counterController.runs.isNotEmpty) {
+                return SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  reverse: true,
+                  child: Row(
+                    children: [
+                      for (var i in counterController.runs)
+                        Container(
+                          margin: const EdgeInsets.symmetric(
+                            vertical: 8,
+                          ),
+                          child: ClayRoundButton(
+                            buttonInputField: Center(child: Text(i)),
+                            rightSpace: const EdgeInsets.only(right: 2),
+                          ),
+                        ),
+                    ],
                   ),
-                ],
-              );
+                );
+              } else {
+                return Spacer();
+              }
             }),
           ),
         ],

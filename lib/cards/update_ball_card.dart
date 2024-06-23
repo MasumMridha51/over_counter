@@ -34,6 +34,7 @@ class UpdateBallCard extends StatelessWidget {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               ClayRoundButton(
                 buttonInputField: TextButton(
@@ -41,8 +42,6 @@ class UpdateBallCard extends StatelessWidget {
                     counterController.updateBallCardShow.value =
                         !counterController.updateBallCardShow.value;
                     counterController.add0History();
-                    counterController.getRunForOver();
-                    print(counterController.runs);
                   },
                   child: const Text('0'),
                 ),
@@ -51,102 +50,148 @@ class UpdateBallCard extends StatelessWidget {
               const SizedBox(
                 width: 18,
               ),
-              const ClayRoundButton(
-                buttonInputField: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
-                  child: Text('1'),
+              ClayRoundButton(
+                buttonInputField: TextButton(
+                  onPressed: () {
+                    counterController.updateBallCardShow.value =
+                        !counterController.updateBallCardShow.value;
+                    counterController.add1History();
+                  },
+                  child: const Text('1'),
                 ),
                 rightSpace: EdgeInsets.zero,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 18,
               ),
               ClayRoundButton(
-                buttonInputField: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
-                  child: Text('2'),
+                buttonInputField: TextButton(
+                  onPressed: () {
+                    counterController.updateBallCardShow.value =
+                        !counterController.updateBallCardShow.value;
+                    counterController.add2History();
+                  },
+                  child: const Text('2'),
                 ),
                 rightSpace: EdgeInsets.zero,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 18,
               ),
               ClayRoundButton(
-                buttonInputField: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
-                  child: Text('3'),
+                buttonInputField: TextButton(
+                  onPressed: () {
+                    counterController.updateBallCardShow.value =
+                        !counterController.updateBallCardShow.value;
+                    counterController.add3History();
+                  },
+                  child: const Text('3'),
                 ),
                 rightSpace: EdgeInsets.zero,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 18,
               ),
               ClayRoundButton(
-                buttonInputField: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
-                  child: Text('4'),
+                buttonInputField: TextButton(
+                  onPressed: () {
+                    counterController.updateBallCardShow.value =
+                        !counterController.updateBallCardShow.value;
+                    counterController.add4History();
+                  },
+                  child: const Text('4'),
                 ),
                 rightSpace: EdgeInsets.zero,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 18,
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               ClayRoundButton(
-                buttonInputField: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
-                  child: Text('5'),
+                buttonInputField: TextButton(
+                  onPressed: () {
+                    counterController.updateBallCardShow.value =
+                        !counterController.updateBallCardShow.value;
+                    counterController.add5History();
+                  },
+                  child: const Text('5'),
                 ),
                 rightSpace: EdgeInsets.zero,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 18,
               ),
               ClayRoundButton(
-                buttonInputField: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 8, horizontal: 10),
-                  child: Text('6'),
+                buttonInputField: TextButton(
+                  onPressed: () {
+                    counterController.updateBallCardShow.value =
+                        !counterController.updateBallCardShow.value;
+                    counterController.add6History();
+                  },
+                  child: const Text('6'),
                 ),
                 rightSpace: EdgeInsets.zero,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 18,
               ),
               ClayRoundButton(
-                buttonInputField: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 8, horizontal: 10),
-                  child: Text('W'),
+                buttonInputField: TextButton(
+                  onPressed: () {
+                    counterController.updateBallCardShow.value =
+                        !counterController.updateBallCardShow.value;
+                    counterController.addwHistory();
+                  },
+                  child: Text(
+                    'W',
+                    style: TextStyle(fontSize: 12),
+                  ),
                 ),
                 rightSpace: EdgeInsets.zero,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 18,
               ),
               ClayRoundButton(
-                buttonInputField: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 8, horizontal: 2),
-                  child: Text('1WD'),
+                buttonInputField: TextButton(
+                  onPressed: () {
+                    counterController.updateBallCardShow.value =
+                        !counterController.updateBallCardShow.value;
+                    counterController.add1WDHistory();
+                  },
+                  child: const Text(
+                    '1WD',
+                    style: TextStyle(fontSize: 7),
+                  ),
                 ),
                 rightSpace: EdgeInsets.zero,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 18,
               ),
               ClayRoundButton(
-                buttonInputField: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 8, horizontal: 5),
-                  child: Text('1NB'),
+                buttonInputField: TextButton(
+                  onPressed: () {
+                    counterController.updateBallCardShow.value =
+                        !counterController.updateBallCardShow.value;
+                    counterController.add1NBHistory();
+                  },
+                  child: const Text(
+                    '1NB',
+                    style: TextStyle(fontSize: 7),
+                  ),
                 ),
                 rightSpace: EdgeInsets.zero,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 18,
               ),
             ],
