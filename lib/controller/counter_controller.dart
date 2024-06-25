@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-import 'package:get/get_rx/get_rx.dart';
 import 'package:get/state_manager.dart';
 
 class CounterController extends GetxController {
@@ -179,8 +178,8 @@ class CounterController extends GetxController {
     runs.clear();
     overs.clear();
     balls.clear();
-    totalWicket--;
-    totalExtraRun--;
-    totalRun--;
+    totalWicket.value = 0;
+    totalExtraRun.value = 0;
+    totalRun.value = 0;
   }
 }
