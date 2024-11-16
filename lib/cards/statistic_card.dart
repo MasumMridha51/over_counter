@@ -27,7 +27,7 @@ class StatisticCard extends StatelessWidget {
             children: [
               Column(
                 children: [
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.all(5),
                     child: ClayText("Total Over",
                         emboss: true, depth: 95, spread: 1, size: 20),

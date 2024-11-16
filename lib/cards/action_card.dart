@@ -13,25 +13,12 @@ class ActionCard extends StatelessWidget {
   Widget build(BuildContext context) {
     Color baseColor = const Color(0xFFF2F2F2);
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        ClayContainer(
-          color: baseColor,
-          height: 100,
-          width: 350,
-          child: ClayContainer(
-            color: baseColor,
-            height: 100,
-            child: const Padding(
-              padding: EdgeInsets.all(5),
-              child: ClayText(
-                  "Oh God, if there be cricket in heaven, let there also be rain.",
-                  emboss: true,
-                  depth: 95,
-                  spread: 1,
-                  size: 20),
-            ),
-          ),
+        Image.asset(
+          'assets/logo/counter-432x432.png', // Path to your logo
+          width: 150, // Adjust the size of the logo
+          height: 150,
         ),
         ClayContainer(
           color: baseColor,
@@ -42,7 +29,7 @@ class ActionCard extends StatelessWidget {
             height: 80,
             width: 80,
             borderRadius: 50,
-            depth: 100,
+            depth: 50,
             spread: 20,
             child: Padding(
               padding: const EdgeInsets.all(5),

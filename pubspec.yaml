@@ -1,5 +1,5 @@
 name: over_counter
-description: "A new Flutter project."
+description: "Count your ball and score"
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -37,6 +37,19 @@ dependencies:
   cupertino_icons: ^1.0.6
   clay_containers: ^0.3.4
   get: ^4.6.6
+  flutter_native_splash: ^2.4.2
+
+flutter_native_splash:
+  color: "#ffffff" # Background color for light mode
+  color_dark: "#ffffff" # Background color for dark mode (white)
+  image: assets/logo/counter-1024x1024.png # Path to your splash screen image
+  android: true # Enable splash for Android
+  ios: true # Enable splash for iOS
+  web: true # Enable splash for web (optional)
+  android_gravity: center # Positioning for Android
+  ios_content_mode: center # Positioning for iOS
+  fullscreen: true # Fullscreen mode (optional)
+
 
 dev_dependencies:
   flutter_test:
@@ -48,6 +61,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.14.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -61,8 +75,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+     - assets/logo/counter-432x432.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

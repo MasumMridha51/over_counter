@@ -175,11 +175,12 @@ class CounterController extends GetxController {
 
   // Restart Button
   restart() {
-    runs.clear();
-    overs.clear();
-    balls.clear();
+    totalRun.value = 0;
     totalWicket.value = 0;
     totalExtraRun.value = 0;
-    totalRun.value = 0;
+    balls.clear();
+    overs.clear();
+    runs.clear();
+    runs.add('');
   }
 }

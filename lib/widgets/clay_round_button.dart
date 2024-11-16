@@ -20,7 +20,7 @@ class ClayRoundButton extends StatelessWidget {
           width: 38,
           borderRadius: 50,
           child: Padding(
-            padding: const EdgeInsets.all(2),
+            padding: const EdgeInsets.all(1),
             child: buttonInputField,
           ),
         ),
